@@ -1,0 +1,6 @@
+node_modules
+/lib/
+/temp/
+/draft/
+.DS_Store
+.bluespec/

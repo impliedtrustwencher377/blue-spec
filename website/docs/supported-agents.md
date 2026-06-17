@@ -1,0 +1,55 @@
+---
+id: supported-agents
+title: Supported Agents
+sidebar_label: Supported Agents
+description: The 37 AI agents Blue Spec works with, and the key for each.
+---
+
+# Supported Agents
+
+Pick your agent by passing its key, for example `npx -y blue-spec@latest init <alias>`. Without it, **Blue Spec** asks you to choose.
+
+```bash
+# For example, using Blue Spec with Claude
+npx -y blue-spec@latest init claude
+```
+
+| Agent                                                                        | Key (Alias)    |
+| ---------------------------------------------------------------------------- | -------------- |
+| [**Amazon Q Developer**](https://aws.amazon.com/q/developer/)                | `amazonq`      |
+| [**Amp**](https://ampcode.com/)                                              | `amp`          |
+| [**Antigravity**](https://antigravity.google/)                               | `agy`          |
+| [**Auggie CLI**](https://docs.augmentcode.com/cli/overview)                  | `auggie`       |
+| [**Claude Code**](https://www.anthropic.com/claude-code)                     | `claude`       |
+| [**Cline**](https://github.com/cline/cline)                                  | `cline`        |
+| [**CodeBuddy CLI**](https://www.codebuddy.ai/cli)                            | `codebuddy`    |
+| [**Codex CLI**](https://github.com/openai/codex)                             | `codex`        |
+| [**Continue**](https://continue.dev/)                                        | `continue`     |
+| [**CoStrict**](https://github.com/zgsm-ai/costrict)                          | `costrict`     |
+| [**Crush**](https://github.com/charmbracelet/crush)                          | `crush`        |
+| [**Cursor**](https://cursor.sh/)                                             | `cursor-agent` |
+| [**Devin for Terminal**](https://cli.devin.ai/docs)                          | `devin`        |
+| [**Factory Droid**](https://factory.ai/)                                     | `factory`      |
+| [**Forge**](https://forgecode.dev/)                                          | `forge`        |
+| [**Gemini CLI**](https://github.com/google-gemini/gemini-cli)                | `gemini`       |
+| [**GitHub Copilot**](https://code.visualstudio.com/)                         | `copilot`      |
+| [**Goose**](https://block.github.io/goose/)                                  | `goose`        |
+| [**Hermes**](https://hermes-agent.nousresearch.com/)                         | `hermes`       |
+| [**IBM Bob**](https://www.ibm.com/products/bob)                              | `bob`          |
+| [**iFlow CLI**](https://docs.iflow.cn/en/cli/quickstart)                     | `iflow`        |
+| [**Junie**](https://junie.jetbrains.com/)                                    | `junie`        |
+| [**Kilo Code**](https://github.com/Kilo-Org/kilocode)                        | `kilocode`     |
+| [**Kimi Code**](https://code.kimi.com/)                                      | `kimi`         |
+| [**Kiro CLI**](https://kiro.dev/docs/cli/)                                   | `kiro-cli`     |
+| [**Lingma**](https://lingma.aliyun.com/)                                     | `lingma`       |
+| [**Mistral Vibe**](https://github.com/mistralai/mistral-vibe)                | `vibe`         |
+| [**opencode**](https://opencode.ai/)                                         | `opencode`     |
+| [**Pi Coding Agent**](https://pi.dev)                                        | `pi`           |
+| [**Qoder CLI**](https://qoder.com/cli)                                       | `qodercli`     |
+| [**Qwen Code**](https://github.com/QwenLM/qwen-code)                         | `qwen`         |
+| [**Roo Code**](https://roocode.com/)                                         | `roo`          |
+| [**RovoDev ACLI**](https://www.atlassian.com/software/rovo-dev)              | `rovodev`      |
+| [**SHAI (OVHcloud)**](https://github.com/ovh/shai)                           | `shai`         |
+| [**Tabnine CLI**](https://docs.tabnine.com/main/getting-started/tabnine-cli) | `tabnine`      |
+| [**Trae**](https://www.trae.ai/)                                             | `trae`         |
+| [**Windsurf**](https://windsurf.com/)                                        | `windsurf`     |

@@ -1,0 +1,57 @@
+---
+id: skills
+title: /bluespec.skills
+sidebar_label: Skills (command)
+description: How sub-skills are loaded, by a phase on demand, and by you directly.
+---
+
+import TabItem from '@theme/TabItem';
+import Tabs from '@theme/Tabs';
+
+# /bluespec.skills
+
+🧠 The dispatcher for **Blue Spec**'s sub-skills: focused, language-agnostic security knowledge modules that load only on demand, never by default.
+
+A sub-skill is not invocable on its own. There is one door, and two ways through it.
+
+## Loaded for you, on demand
+
+When a phase like detect or verify hits a context a sub-skill covers, it runs `/bluespec.skills` itself and the dispatcher loads the right knowledge. This happens automatically, as part of the phase. You do not run it by hand for this to work.
+
+```bash
+/bluespec.skills regex
+```
+
+:::note[This form is the internal door]
+
+Typing `/bluespec.skills regex` on its own only loads the knowledge into the agent's context. On its own it does no work, because there is nothing for it to act on. To run a sub-skill against your code yourself, import the file and give it a task (see below).
+:::
+
+## Run one yourself
+
+To use a sub-skill directly, import its file with `@` and write the task in the same prompt. The knowledge then acts on what you asked for.
+
+```bash
+@.bluespec/skills/regex.md
+Create a collection of regular expressions in @src/utils/regex.py to validate emails and usernames.
+```
+
+This is the user-facing way, and it works in any prompt, even one unrelated to the **Blue Spec** flow. For the full walkthrough and output, see [**Available Skills**](../skills.mdx).
+
+## Discover what is available
+
+Run the command with no selector to list the catalog.
+
+```bash
+/bluespec.skills
+```
+
+:::note[Not loaded by default]
+
+_Sub_-skills are **not loaded by default**. The relevant knowledge is pulled in for what the project actually is, instead of every check running by default.
+:::
+
+:::tip
+
+The _sub_-skills live in `.bluespec/skills/`, so the file to import is `@.bluespec/skills/<name>.md`.
+:::

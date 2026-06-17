@@ -1,0 +1,33 @@
+---
+id: repair
+title: /bluespec.repair
+sidebar_label: Repair
+description: Repair the chain when a rename or a moved file confuses Blue Spec's tracking.
+---
+
+# /bluespec.repair
+
+🧰 Repair the chain when a rename or a moved file confuses it.
+
+:::note[Internal maintenance, not a security phase]
+
+Repair is not a sixth phase in the linear flow. Its job is to keep the tracking coherent.
+:::
+
+```bash
+# It takes no input: it always repairs the whole chain
+/bluespec.repair
+```
+
+## How it works
+
+Each detect finding is one tracked item that plan, harden, and verify carry forward, each acting on it and re-reporting it by name. That name, written identically as the section title in every artifact, is its identity throughout.
+
+The one volatile thing the tracking stores is the file paths the item points at. Those paths live nowhere else, so a rename or a moved file can break the link only there, never in two diverging copies. When that happens, repair corrects the map (`.bluespec/tracking.json`) so identity survives the rename. It reads the artifacts and the tracking map, reads your source only to learn a renamed file's new path, and never authors security content.
+
+:::tip
+
+- It touches neither your code nor the prose artifacts, only the tracking.
+- You rarely run it by hand. When a phase notices the chain is inconsistent, it runs repair for you and continues.
+- The tracking it maintains lives in `.bluespec/tracking.json`, internal state you never edit by hand.
+  :::

@@ -1,0 +1,63 @@
+---
+id: charter
+title: /bluespec.charter
+sidebar_label: 1. Charter
+description: Establish your project's security principles, the rules every later phase respects.
+---
+
+import TabItem from '@theme/TabItem';
+import Tabs from '@theme/Tabs';
+
+# /bluespec.charter
+
+🧬 Set the rules, or let **Blue Spec** define them for you.
+
+The charter is the governing layer: a set of security-first principles every later phase must respect. Think of it as the compile-time check for your project's security posture.
+
+## Run it
+
+<Tabs>
+  <TabItem value="propose" label="Let Blue Spec propose" default>
+
+```bash
+/bluespec.charter
+```
+
+> _I see a payment library, a login setup, and an order model tied to a customer. This looks like an online store that sells something. Customers pay and track their own orders..._ ☁️
+
+  </TabItem>
+  <TabItem value="describe" label="Describe it">
+
+```bash
+/bluespec.charter My project is an online store that sells video games. Customers add products to a cart and pay by credit card or bank slip. They can see their orders and the status of each one.
+```
+
+  </TabItem>
+</Tabs>
+
+## What it works out
+
+From your description, or from the project itself, **Blue Spec** works out what that implies for security. For example:
+
+- A cart that holds orders means there is a **database**:
+  - e.g., `"Where does the data live?"`, `"Who can reach it?"`, `"Whether it leaks?"`.
+- Customers who can see their own orders means there is some kind of **login or access control**:
+  - e.g., `"Can one customer reach another's orders?"`, `"Are sessions protected?"`.
+- Taking card and bank slip payments means **money and sensitive data are involved**:
+  - e.g., `"Is card data stored?"`, `"Are payments verified?"`.
+
+From there, **Blue Spec** builds a tailored set of security rules for the project, which you can review and adjust whenever you need.
+
+:::tip[Get the most out of it]
+
+- You can also define your own security rules for the project.
+- The more relevant detail you give, the better the final report:
+  - Explain the project, how it works, and what happens under the hood.
+  - Who is the end user? What can users do, and what can they not?
+  - Behavioral detail is as valuable as technical detail.
+- The charter memory lives in `.bluespec/memory/charter.md`.
+  :::
+
+## Next
+
+With the rules set, map what your system actually does: [`/bluespec.detect`](./detect.mdx).

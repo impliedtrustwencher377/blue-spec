@@ -1,0 +1,14 @@
+{
+  "name": "template-toolkit",
+  "version": "1.4.0",
+  "type": "module",
+  "bin": {
+    "tmpl": "bin/cli.js"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "dependencies": {
+    "node-fetcch": "^3.3.2"
+  }
+}

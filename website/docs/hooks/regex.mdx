@@ -1,0 +1,41 @@
+---
+id: regex
+title: regex hook
+sidebar_label: regex
+description: Score a regular expression for ReDoS, straight from the command line.
+---
+
+# `regex` hook
+
+The `regex` hook decides whether a regular expression is safe from **ReDoS** (a pattern that explodes on crafted input). It is the deterministic engine the `regex` sub-skill uses, and you can run it yourself.
+
+## Run it
+
+Pass the pattern as a single quoted argument. The hook prints one word: `safe`, `unsafe`, or `invalid regex`.
+
+```bash
+node ./.bluespec/hooks/regex.mjs '(a+)+'
+# => unsafe
+```
+
+```bash
+node ./.bluespec/hooks/regex.mjs '^[a-z0-9_]{3,20}$'
+# => safe
+```
+
+An optional second argument sets the repetition limit (the default is 25). A lower limit is stricter.
+
+```bash
+node ./.bluespec/hooks/regex.mjs 'a?a?a?' 2
+# => unsafe
+```
+
+:::note[Why a quoted argument]
+
+The pattern is passed as a positional argument, never interpolated into the command. A value with quotes or backticks stays inert and cannot inject into the shell. Always wrap the pattern in single quotes so your shell does not expand it first.
+:::
+
+:::tip
+
+This is the same check the [`regex` sub-skill](../skills.mdx) runs to keep only the safe patterns. You can also try a pattern in the browser at [**devina.io/redos-checker**](https://devina.io/redos-checker).
+:::

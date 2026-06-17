@@ -1,0 +1,5 @@
+* text=auto eol=lf
+
+website/** linguist-documentation
+src/bin/** linguist-language=TypeScript
+.claude/skills/** linguist-vendored

@@ -1,0 +1,26 @@
+---
+id: skills
+title: skills hook
+sidebar_label: skills
+description: List the available sub-skills and their tags from the command line.
+---
+
+# `skills` hook
+
+The `skills` hook lists every sub-skill **Blue Spec** ships, with the tags that describe what each one covers. It is the deterministic catalog the `/bluespec.skills` dispatcher reads, and you can run it yourself to see what is available.
+
+## Run it
+
+It takes no arguments. Each line is one sub-skill followed by its tags.
+
+```bash
+node ./.bluespec/hooks/skills.mjs
+# => regex: RegExp, Regular Expression
+#    javascript: JavaScript, Node.js, Deno, Bun, TypeScript, Workers
+#    browser: Browser, DOM, Navigator
+```
+
+:::tip
+
+To actually run one of these against your code, import its file with a task, for example `@.bluespec/skills/regex.md`. See [**Available Skills**](../skills.mdx) for the full walkthrough.
+:::

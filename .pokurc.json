@@ -1,0 +1,8 @@
+{
+  "$schema": "https://poku.io/schemas/configs.json",
+  "include": "test",
+  "reporter": "compact",
+  "deno": {
+    "allow": ["all"]
+  }
+}
