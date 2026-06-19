@@ -1,13 +1,13 @@
 # Browser / client-side vulnerabilities
 
-> It is loaded by `/bluespec.skills browser`.
+> This knowledge extends your judgment. Apply what fits the project and keep reasoning beyond the list.
 
 When JavaScript runs in a browser, it inherits a second attack surface the runtime does not have on a server: the DOM, the page's origin, the URL, cross-window messaging, and client-side storage. This skill maps the vulnerability classes that exist **because the code runs in a browser**, separate from the language-level risks in the `javascript` skill.
 
 ## Rules
 
 - This skill audits and explains.
-- It never rewrites your code for you and never produces an attack input.
+- By default, it never rewrites your code.
 
 ## What to look for
 
@@ -49,5 +49,3 @@ Safer shape: validate the destination against an allowlist of paths or origins, 
 
 - **In detect (detection):** each pattern you confirm is a finding. Describe it in plain language: what it is (the browser behavior being abused), why it matters (the concrete impact, for example script execution in the user's session or token theft), and the evidence (the function or area where it lives). It flows through detect's normal steps and is tracked like any other finding.
 - **In verify (proof):** the control holds only when the unsafe pattern is gone or properly guarded (a non-HTML sink, an origin check on the listener, a token moved off web storage, an allowlisted redirect). If the dangerous pattern still reaches untrusted input, the risk is not closed: record it as such and point back to harden.
-
-This knowledge extends your judgment, it does not bound it. Apply what fits the project and keep reasoning beyond the list: the test is always whether untrusted input can reach the dangerous behavior.
