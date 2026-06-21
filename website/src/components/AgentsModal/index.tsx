@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { IconSwap } from '@site/src/components/home/IconSwap';
 import { useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { LuCircle, LuCircleCheckBig, LuX } from 'react-icons/lu';
@@ -19,7 +20,7 @@ const AgentRow = ({
     role='radio'
     aria-checked={on}
     onClick={onClick}
-    className={`flex items-center gap-3 p-[13px_14px] rounded-[14px] border text-left cursor-pointer transition-[background,border-color,color] duration-200 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 ${
+    className={`flex items-center gap-3 p-[13px_14px] rounded-[14px] border text-left cursor-pointer transition-[background-color,border-color,color] duration-200 ease-out focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 ${
       on
         ? 'text-ink border-accent/50 bg-accent/10'
         : 'text-muted border-line bg-card hover:bg-card-hover hover:border-white/[0.16]'
@@ -28,12 +29,12 @@ const AgentRow = ({
     <span className='flex-1 min-w-0 text-[14px] font-medium tracking-[-0.01em] overflow-hidden text-ellipsis whitespace-nowrap'>
       {agent.name}
     </span>
-    <span
-      className={`shrink-0 size-[18px] [&>svg]:size-[18px] ${on ? 'text-accent' : 'text-faint'}`}
-      aria-hidden
-    >
-      {on ? <LuCircleCheckBig /> : <LuCircle />}
-    </span>
+    <IconSwap
+      on={on}
+      className={`shrink-0 [&_svg]:size-[18px] ${on ? 'text-accent' : 'text-faint'}`}
+      active={<LuCircleCheckBig />}
+      inactive={<LuCircle />}
+    />
   </button>
 );
 
@@ -93,7 +94,7 @@ export const AgentsModal = ({
             type='button'
             onClick={onClose}
             aria-label='Close'
-            className='inline-flex items-center justify-center size-9 -mr-1.5 rounded-full text-muted cursor-pointer transition-colors hover:bg-white/[0.08] hover:text-ink [&>svg]:size-[18px]'
+            className='relative inline-flex items-center justify-center size-9 -mr-1.5 rounded-full text-muted cursor-pointer transition-[color,background-color] duration-200 ease-out hover:bg-white/[0.08] hover:text-ink after:absolute after:top-1/2 after:left-1/2 after:size-10 after:-translate-x-1/2 after:-translate-y-1/2 [&>svg]:size-[18px]'
           >
             <LuX />
           </button>

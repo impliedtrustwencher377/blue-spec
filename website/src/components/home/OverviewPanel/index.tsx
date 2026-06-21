@@ -50,7 +50,7 @@ const OverviewPanelComponent = ({
       <button
         type='button'
         onClick={onInstall}
-        className='bs-cta group relative inline-flex items-center justify-center gap-2.5 px-[22px] py-[13px] rounded-[13px] overflow-hidden font-sans text-[14px] font-bold tracking-[-0.01em] text-white cursor-pointer transition-[background,box-shadow] duration-300 [background:linear-gradient(180deg,#1f7bff_0%,var(--color-accent)_100%)] [box-shadow:inset_0_1px_0_rgba(255,255,255,0.35),0_2px_6px_-2px_rgba(0,0,0,0.35)] hover:[box-shadow:inset_0_1px_0_rgba(255,255,255,0.45),0_6px_14px_-4px_rgba(0,0,0,0.4)] focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 max-[600px]:w-full max-[600px]:justify-start'
+        className='bs-cta group relative inline-flex items-center justify-center gap-2.5 pl-5 pr-[22px] py-[13px] rounded-[13px] overflow-hidden font-sans text-[14px] font-bold tracking-[-0.01em] text-white cursor-pointer transition-[box-shadow] duration-300 ease-out [background:linear-gradient(180deg,#1f7bff_0%,var(--color-accent)_100%)] [box-shadow:inset_0_1px_0_rgba(255,255,255,0.35),0_2px_6px_-2px_rgba(0,0,0,0.35)] hover:[box-shadow:inset_0_1px_0_rgba(255,255,255,0.45),0_6px_14px_-4px_rgba(0,0,0,0.4)] focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 max-[600px]:w-full max-[600px]:justify-start'
       >
         <LuTerminal className='size-[17px] shrink-0' aria-hidden />
         <span className='[text-shadow:0_1px_1px_rgba(0,0,0,.5)]'>Install</span>
@@ -58,7 +58,7 @@ const OverviewPanelComponent = ({
       <button
         type='button'
         onClick={onOpenPaper}
-        className='inline-flex items-center justify-center gap-2.5 px-[22px] py-[13px] rounded-[13px] overflow-hidden font-sans text-[14px] font-semibold tracking-[-0.01em] text-ink cursor-pointer transition-[background,border-color] duration-300 border border-accent/45 bg-accent/[0.12] hover:bg-accent/20 hover:border-accent/[0.65] focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 max-[600px]:w-full max-[600px]:justify-start'
+        className='inline-flex items-center justify-center gap-2.5 pl-5 pr-[22px] py-[13px] rounded-[13px] overflow-hidden font-sans text-[14px] font-semibold tracking-[-0.01em] text-ink cursor-pointer transition-[background-color,border-color] duration-300 ease-out border border-accent/45 bg-accent/[0.12] hover:bg-accent/20 hover:border-accent/[0.65] focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 max-[600px]:w-full max-[600px]:justify-start'
       >
         <LuBookOpen className='size-[17px] shrink-0 text-accent' aria-hidden />
         <span>What is Security-Driven Hardening</span>

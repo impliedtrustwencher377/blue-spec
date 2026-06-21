@@ -226,14 +226,14 @@ const Home = (): ReactNode => {
 
             <div className='flex items-center justify-end gap-1.5'>
               <a
-                className='inline-flex items-center gap-1.5 px-3.5 py-[7px] rounded-full text-[14px] font-semibold tracking-[-0.01em] whitespace-nowrap no-underline text-[rgba(244,244,243,0.62)] transition-colors duration-200 hover:text-ink [&>svg]:size-3.5 [&>svg]:opacity-70'
+                className='inline-flex items-center gap-1.5 pl-3.5 pr-3 py-[7px] rounded-full text-[14px] font-semibold tracking-[-0.01em] whitespace-nowrap no-underline text-[rgba(244,244,243,0.62)] transition-colors duration-200 ease-out hover:text-ink [&>svg]:size-3.5 [&>svg]:opacity-70'
                 href='/docs'
               >
                 Docs
                 <LuArrowUpRight aria-hidden />
               </a>
               <a
-                className='inline-flex items-center gap-[9px] px-4 py-[9px] rounded-full border border-line bg-card text-ink text-[14px] font-semibold tracking-[-0.01em] no-underline cursor-pointer transition-[background,border-color] duration-200 hover:bg-card-hover hover:border-white/[0.18] [&>svg]:size-4 [&>svg]:opacity-80'
+                className='inline-flex items-center gap-[9px] pl-4 pr-[18px] py-[9px] rounded-full border border-line bg-card text-ink text-[14px] font-semibold tracking-[-0.01em] no-underline cursor-pointer transition-[background-color,border-color] duration-200 ease-out hover:bg-card-hover hover:border-white/[0.18] [&>svg]:size-4 [&>svg]:opacity-80'
                 href='https://github.com/wellwelwel/blue-spec'
               >
                 <FaGithub aria-hidden />
@@ -260,7 +260,7 @@ const Home = (): ReactNode => {
                           key={step.phase.title}
                           type='button'
                           onClick={() => goToStep(index)}
-                          className={`flex items-center justify-center size-[22px] border-0 bg-none cursor-pointer transition-colors duration-200 [&>svg]:size-[19px] hover:text-ink ${
+                          className={`relative flex items-center justify-center size-[22px] border-0 bg-none cursor-pointer transition-colors duration-200 ease-out [&>svg]:size-[19px] hover:text-ink after:absolute after:top-1/2 after:left-1/2 after:size-10 after:-translate-x-1/2 after:-translate-y-1/2 ${
                             index === usageStep
                               ? 'bs-rail__item--active text-ink'
                               : 'text-faint'
@@ -285,7 +285,7 @@ const Home = (): ReactNode => {
                               ? () => setAgentsOpen(true)
                               : undefined
                         }
-                        className={`flex items-center justify-center size-[22px] border-0 bg-none cursor-pointer transition-colors duration-200 [&>svg]:size-[19px] hover:text-ink ${
+                        className={`relative flex items-center justify-center size-[22px] border-0 bg-none cursor-pointer transition-colors duration-200 ease-out [&>svg]:size-[19px] hover:text-ink after:absolute after:top-1/2 after:left-1/2 after:size-10 after:-translate-x-1/2 after:-translate-y-1/2 ${
                           item.active
                             ? 'bs-rail__item--active text-ink'
                             : 'text-faint'

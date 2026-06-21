@@ -23,7 +23,7 @@ export const PhaseCard = ({
         <img
           src={`/img/commands/${slug}.png`}
           alt=''
-          className='absolute inset-0 size-full object-cover'
+          className='bs-img-outline absolute inset-0 size-full object-cover'
           aria-hidden
         />
         <div
@@ -66,7 +66,7 @@ export const PhaseCard = ({
               type='button'
               onClick={() => onSelectMode(index)}
               aria-pressed={index === modeIndex}
-              className={`px-3.5 py-[7px] text-[12px] font-semibold tracking-[-0.01em] whitespace-nowrap cursor-pointer transition-colors duration-200 max-[600px]:flex-1 [&:not(:first-child)]:border-l [&:not(:first-child)]:border-line ${
+              className={`px-3.5 py-2 text-[12px] font-semibold tracking-[-0.01em] whitespace-nowrap cursor-pointer transition-[color,background-color] duration-200 ease-out max-[600px]:flex-1 [&:not(:first-child)]:border-l [&:not(:first-child)]:border-line ${
                 index === modeIndex
                   ? 'bg-accent/15 text-accent'
                   : 'text-muted hover:text-ink hover:bg-white/[0.03]'
