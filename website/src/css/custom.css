@@ -72,12 +72,6 @@
     height: auto;
   }
 
-  .bs-canvas,
-  .bs-modal-backdrop {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
   .bs-canvas :is(h1, h2, h3),
   .bs-modal-backdrop :is(h1, h2, h3) {
     text-wrap: balance;
@@ -180,7 +174,7 @@
 }
 
 .bs-img-outline {
-  outline: 1px solid rgba(255, 255, 255, 0.1);
+  outline: 1px solid rgba(0, 0, 0, 0.4);
   outline-offset: -1px;
 }
 
@@ -424,6 +418,11 @@ html[data-theme='dark'] body {
     var(--bs-bg);
 }
 
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 html,
 body {
   min-width: 340px;
@@ -482,6 +481,19 @@ body {
   letter-spacing: -0.02em;
   border-bottom: 1px solid var(--bs-line);
   padding-bottom: 0.4rem;
+}
+
+.markdown :is(h1, h2, h3, h4) {
+  text-wrap: balance;
+}
+
+.markdown :is(p, li, blockquote, figcaption) {
+  text-wrap: pretty;
+}
+
+.markdown img {
+  outline: 1px solid rgba(0, 0, 0, 0.4);
+  outline-offset: -1px;
 }
 
 .markdown :not(pre) > code {
