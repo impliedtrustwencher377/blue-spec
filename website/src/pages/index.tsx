@@ -278,7 +278,7 @@ const Home = (): ReactNode => {
                           className={`relative flex items-center justify-center size-[22px] border-0 bg-none cursor-pointer transition-colors duration-200 ease-out [&>svg]:size-[19px] hover:text-ink after:absolute after:top-1/2 after:left-1/2 after:size-10 after:-translate-x-1/2 after:-translate-y-1/2 ${
                             index === usageStep
                               ? 'bs-rail__item--active text-ink'
-                              : 'text-faint'
+                              : 'text-[#515664]'
                           }`}
                           aria-label={`${step.phase.title} (step ${index + 1} of ${PHASE_STEPS.length})`}
                           aria-current={
@@ -293,7 +293,7 @@ const Home = (): ReactNode => {
                       const railItemClass = `relative flex items-center justify-center size-[22px] border-0 bg-none cursor-pointer transition-colors duration-200 ease-out [&>svg]:size-[19px] hover:text-ink after:absolute after:top-1/2 after:left-1/2 after:size-10 after:-translate-x-1/2 after:-translate-y-1/2 ${
                         item.active
                           ? 'bs-rail__item--active text-ink'
-                          : 'text-faint'
+                          : 'text-[#515664]'
                       }`;
 
                       if (item.href)

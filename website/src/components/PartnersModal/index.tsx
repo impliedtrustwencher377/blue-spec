@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { useEffect, useRef, useState } from 'react';
-import { LuCheck, LuGem, LuSend, LuX } from 'react-icons/lu';
+import { LuCheck, LuHeartHandshake, LuSend, LuX } from 'react-icons/lu';
 
 type PartnershipType = (typeof PARTNERSHIP_TYPES)[number];
 
@@ -252,14 +252,14 @@ export const PartnersModal = ({
       >
         <div className='flex items-center justify-between gap-4 shrink-0 px-[clamp(20px,3vw,32px)] py-4 border-b border-[#0c155c] bg-[#0a0f1f]'>
           <span className='inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.14em] uppercase text-muted [&>svg]:size-3.5 [&>svg]:text-accent'>
-            <LuGem aria-hidden />
+            <LuHeartHandshake aria-hidden />
             Partnerships
           </span>
           <button
             type='button'
             onClick={onClose}
             aria-label='Close'
-            className='relative inline-flex items-center justify-center size-9 -mr-1.5 rounded-full text-muted transition-[color,background-color] duration-200 ease-out hover:bg-white/[0.08] hover:text-ink after:absolute after:top-1/2 after:left-1/2 after:size-10 after:-translate-x-1/2 after:-translate-y-1/2 [&>svg]:size-[18px]'
+            className='relative inline-flex items-center justify-center size-9 -mr-1.5 rounded-full text-[#9499a5] transition-[color,background-color] duration-200 ease-out hover:bg-white/[0.08] hover:text-ink after:absolute after:top-1/2 after:left-1/2 after:size-10 after:-translate-x-1/2 after:-translate-y-1/2 [&>svg]:size-[18px]'
           >
             <LuX />
           </button>
@@ -277,8 +277,7 @@ export const PartnersModal = ({
                 <p className='text-[15px] leading-[1.6] text-[rgba(233,237,247,0.82)] m-0'>
                   Building something in the security or AI-coding space? Put
                   your name next to security-by-default. Partners get a mention,
-                  and integrations get a spotlight. Tell us what you have in
-                  mind.
+                  and integrations get a spotlight. Tell what you have in mind.
                 </p>
               </div>
 
@@ -343,7 +342,7 @@ export const PartnersModal = ({
                     className={`${fieldClass} min-h-[112px] resize-y`}
                     name='message'
                     rows={4}
-                    placeholder='Tell us what you have in mind…'
+                    placeholder="Tell what we're going to build ✨"
                     value={draft.message}
                     onChange={update('message')}
                     required
